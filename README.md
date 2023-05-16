@@ -61,7 +61,7 @@ To start using Yuniye, follow the instructions below:
 
    You should see the output: `Hello, World!`.
 
-4. **Explore**: Familiarize yourself with the Yuniye language by checking out the [Yuniye language reference](https://github.com/yuniye/yuniye/blob/main/doc/docs.md).
+4. **Explore**: Familiarize yourself with the Yuniye language by checking out [Yuniye Documentation](https://github.com/yuniye/yuniye/blob/main/doc/docs.md).
 
 ## Documentation
 
@@ -167,6 +167,6 @@ Yuniye is released under the [MIT License](LICENSE), granting you the freedom to
 
 Yuniye stands on the shoulders of giants. We would like to express our gratitude to the developers and contributors behind the programming languages that have inspired Yuniye's design and features.
 
-Currently more 75% of the codebase was written by GPT-4. Thanks to OpenAI for developing such a capable AI model.
+Currently more than 75% of the codebase was written by GPT-4. Thanks to OpenAI for developing such a capable AI model.
 
 *Note: The Yuniye logo is subject to copyright and is provided here for illustrative purposes only.*
