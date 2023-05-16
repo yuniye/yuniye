@@ -1,11 +1,12 @@
 <div align="center" style="display:grid;place-items:center;">
 <p>
-    <a href="https://vlang.io/" target="_blank"><img width="80" src="https://github.com/yuniye/yuniye/assets/53147395/1d4efbc6-0748-43b9-9fbf-9d8fb72f8606?sanitize=true" alt="Yuniye logo"></a>
+    <a href="https://vlang.io/" target="_blank"><img width="80" src="https://github.com/yuniye/yuniye/assets/53147395/1a049d06-a27d-4b45-aabc-f15fb1fbc066?sanitize=true" alt="Yuniye logo"></a>
 </p>
 <h1>The Yuniye Programming Language</h1>
 
 [yuniye.github.io](https://yuniye.github.io) | [Docs](https://github.com/yuniye/yuniye/blob/main/doc/docs.md) | [Changelog](https://github.com/yuniye/yuniye/blob/main/CHANGELOG.md) | [Speed](https://github.com/yuniye/yuniye/actions?query=workflow%3ABenchmark) | [Contributing](https://github.com/yuniye/yuniye/blob/main/CONTRIBUTING.md)
 </div>
+
 
 <div align="center" style="display:grid;place-items:center;">
 
@@ -41,7 +42,7 @@
 
 To start using Yuniye, follow the instructions below:
 
-1. **Installation**: Download the latest release of Yuniye for your operating system from the [our GitHub Release Page](https://github.com/yuniye/yuniye/releases).
+1. **Installation**: Download the latest release of Yuniye for your operating system from [our GitHub Releases](https://github.com/yuniye/yuniye/releases).
 
 2. **Hello, World!**: Write your first Yuniye program by creating a new file, `hello.yy`, and entering the following code:
 
