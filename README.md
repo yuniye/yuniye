@@ -113,6 +113,42 @@ orange = Fruit::Orange;
 std::format::repeat(print_fruit, apple, banana, orange);
 ```
 
+**Example 3: Python, Rust, and C++ Interoperability**
+
+```rust
+// Importing Rust, C++, and Python code into Yuniye
+// eg. use extern#RUST "/path/to/file.rs" as my_rust
+
+// Importing Rust code
+my_rust: extern#RUST {
+    fn hello_world(num: i32) -> i32;
+}
+
+// Importing C++ code
+my_cpp: extern#CPP {
+    int add_numbers(int a, int b);
+}
+
+// Importing Python code
+my_python: extern#PYTHON {
+    def multiply_numbers(a, b):
+        return a * b
+}
+
+// Calling Rust function from Yuniye
+rust_result = my_rust.hello_world(42);
+print("Rust result:", rust_result);
+
+// Calling C++ function from Yuniye
+cpp_result = my_cpp.add_numbers(10, 20);
+print("C++ result:", cpp_result);
+
+// Calling Python function from Yuniye
+python_result = my_python.multiply_numbers(5, 6);
+print("Python result:", python_result);
+
+```
+
 ## Community and Support
 
 Join the Yuniye community to get support, share your experiences, and collaborate with fellow developers:
