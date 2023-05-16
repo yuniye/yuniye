@@ -1,0 +1,62 @@
+name: CI - Build & Test
+
+on:
+  pull_request: ~
+  push: { branches: [main], tags: ["*"] }
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build_and_test:
+    name: Build and Test
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+
+    runs-on: ${{ matrix.operating-system }}
+
+    steps:
+      - name: Set git to use LF on Windows
+        if: matrix.operating-system == 'windows-latest'
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Nightly Toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+
+      - name: Run Cargo Tarpaulin
+        uses: actions-rs/tarpaulin@v0.1
+        with:
+          args: "-- --test-threads 1"
+
+      - name: Upload to codecov.io
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+
+  benchmark:
+    name: Benchmark
+    needs: build_and_test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Nightly Toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+
+      - name: Run Benchmarks
+        run: cargo bench --verbose
