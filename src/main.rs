@@ -57,7 +57,7 @@ impl Command {
   yuniye {}               Installs dependencies and/or builds current project
   yuniye {}      Removes all compiled files from given folder
 
-See `duke {}` for more information on a specific command.
+See `yuniye {}` for more information on a specific command.
             ",
             format!("\n{} version {} \n", "The Yuniye Programming Language".green().bold(), Self::VERSION.yellow()),
             "Usage:".yellow(),
